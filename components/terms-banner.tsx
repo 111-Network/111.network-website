@@ -10,15 +10,19 @@ export function TermsBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check if user has already accepted terms
-    const hasAccepted = localStorage.getItem("terms-accepted");
-    if (!hasAccepted) {
-      setIsVisible(true);
+    // Check if user has already accepted terms (client-side only)
+    if (typeof window !== "undefined") {
+      const hasAccepted = localStorage.getItem("terms-accepted");
+      if (!hasAccepted) {
+        setIsVisible(true);
+      }
     }
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem("terms-accepted", "true");
+    if (typeof window !== "undefined") {
+      localStorage.setItem("terms-accepted", "true");
+    }
     setIsVisible(false);
   };
 
