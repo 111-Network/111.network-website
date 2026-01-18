@@ -1,15 +1,16 @@
 # 111 Network Web - Documentation
 
-**Version**: v0.1.0 (Pre-MVP)  
-**Status**: Monorepo structure, preparing for Turborepo and Supabase integration
+**Version**: v0.1.1 (Pre-MVP)  
+**Status**: Turborepo monorepo configured, Supabase integration upcoming
 
 ## Current State
 
-- **Monorepo Structure**: Turborepo setup upcoming
+- **Monorepo Structure**: Turborepo v2.7.5 configured and operational
 - **Live App**: `apps/website` - Next.js 16 application
 - **Packages**: `packages/` directory structure in place (database, protocol, ui)
 - **Database**: Supabase integration upcoming
-- **Build System**: Turborepo configuration upcoming
+- **Build System**: Turborepo configured with pnpm workspaces
+- **Node**: v24.13.0
 
 ## Structure
 

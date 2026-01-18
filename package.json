@@ -1,21 +1,20 @@
 {
   "name": "111-network-web",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "111 Network Web - Monorepo for web applications and packages",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
   "engines": {
-    "node": ">=20.9.0"
+    "node": ">=24.13.0",
+    "pnpm": ">=9.0.0"
   },
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "lint": "turbo run lint"
+    "lint": "turbo run lint",
+    "start": "turbo run start"
   },
   "devDependencies": {
-    "turbo": "latest"
+    "turbo": "^2.7.5"
   }
 }
