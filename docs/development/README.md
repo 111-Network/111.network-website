@@ -1,6 +1,9 @@
 # Development Documentation
 
-This directory contains guides and documentation for developers working on the 111 Network website.
+This directory contains guides and documentation for developers working on the 111 Network web monorepo.
+
+**Version**: v0.1.0 (Pre-MVP)  
+**Monorepo**: Turborepo structure (upcoming setup)
 
 ## Available Guides
 

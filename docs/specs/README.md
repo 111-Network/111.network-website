@@ -27,8 +27,6 @@ Each specification should include:
 
 ## Current Specifications
 
-- `message-format.md` - Message data model specification (for future protocol integration)
-- `map-integration.md` - World map feature specification
 - `api-endpoints.md` - API specification (when APIs are defined)
 
 ## Creating a New Spec

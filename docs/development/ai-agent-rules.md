@@ -2,7 +2,14 @@
 
 ## Project Context
 
-This is the **111 Network website** - a Next.js 16 frontend application built with:
+**Version**: v0.1.0 (Pre-MVP)  
+**Monorepo Structure**: Turborepo (upcoming) with Supabase (upcoming)
+
+This is the **111 Network web monorepo** containing:
+- **apps/website** - Next.js 16 frontend application (currently live)
+- **packages/** - Shared packages (database, protocol, ui - structure in place)
+
+### apps/website Tech Stack
 - **Framework**: Next.js 16.1+ (App Router)
 - **React**: 19.0+
 - **TypeScript**: 5.7+
@@ -25,11 +32,12 @@ This is the **111 Network website** - a Next.js 16 frontend application built wi
 - Extract reusable logic into custom hooks
 - Use React.memo() sparingly, only for performance-critical components
 
-### File Organization
-- Components: `components/` directory
-- Pages/Routes: `app/` directory (App Router)
-- Utilities: `lib/` directory
-- Types: Co-locate with components or in `lib/types.ts` if shared
+### File Organization (apps/website)
+- Components: `apps/website/components/` directory
+- Pages/Routes: `apps/website/app/` directory (App Router)
+- Utilities: `apps/website/lib/` directory
+- Types: Co-locate with components or in `apps/website/lib/types.ts` if shared
+- Shared packages: `packages/` directory (for code shared across apps)
 - Styles: Tailwind classes (prefer utility classes over custom CSS)
 
 ### Styling Guidelines
@@ -67,14 +75,14 @@ This is the **111 Network website** - a Next.js 16 frontend application built wi
 4. Ensure TypeScript types are correct
 
 ### When Creating Components
-1. Create in `components/` directory
+1. Create in `apps/website/components/` directory (or `packages/ui/` if shared)
 2. Use PascalCase for component files (`ComponentName.tsx`)
 3. Export as named export
 4. Include TypeScript interface for props
 5. Add `"use client"` only if needed
 
 ### When Modifying Pages
-1. Pages are in `app/` directory
+1. Pages are in `apps/website/app/` directory
 2. Use Server Components by default
 3. Add `"use client"` only when needed
 4. Follow Next.js 16 App Router conventions
@@ -159,8 +167,16 @@ className="flex-col md:flex-row"
 ## Project-Specific Conventions
 
 - Navigation uses `GlitchText` component for special effects
-- Theme provider is configured in `app/layout.tsx`
+- Theme provider is configured in `apps/website/app/layout.tsx`
 - Use `AnimatedSection` for scroll-triggered animations
 - Container component provides consistent max-width
 - Section component handles spacing and layout
 - **UI Components**: Reference [shadcnblocks.com](https://docs.shadcnblocks.com/) for shadcn/ui block patterns and implementation examples
+
+## Monorepo Structure Notes
+
+- **Current app**: `apps/website` is the live application
+- **Shared code**: Use `packages/` for code shared across apps
+- **Turborepo**: Will be configured next for build orchestration
+- **Supabase**: Will be integrated next for database/auth
+- **Version**: Tracked in root `package.json` (currently v0.1.0)

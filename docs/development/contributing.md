@@ -6,7 +6,7 @@
 
 1. **Read the spec** - Before implementing, read the relevant specification in `docs/specs/`
 2. **Review ADRs** - Check `docs/adr/` for architectural decisions
-3. **Implement** - Build the feature according to the spec
+3. **Implement** - Build the feature according to the spec in `apps/website/` or `packages/`
 4. **Test** - Write tests to verify the implementation matches the spec
 5. **Document** - Update documentation if needed
 

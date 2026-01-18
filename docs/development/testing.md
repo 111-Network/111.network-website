@@ -44,9 +44,9 @@ Testing tools will be selected and documented here as they are chosen. Potential
 ## Test Structure
 
 Tests will be organized alongside the code they test:
-- Component tests: `Component.test.tsx` or `Component.spec.tsx`
-- Utility tests: `utils.test.ts`
-- Integration tests: `__tests__/` directory
+- Component tests: `apps/website/components/Component.test.tsx` or `Component.spec.tsx`
+- Utility tests: `apps/website/lib/utils.test.ts` or `packages/*/src/utils.test.ts`
+- Integration tests: `__tests__/` directory in respective app/package
 
 ## Running Tests
 

@@ -10,9 +10,10 @@
 
 1. Clone the repository (if not already cloned)
 2. Navigate to the repository directory
-3. Install dependencies: `npm install` (or `yarn install` / `pnpm install`)
-4. Copy environment variables template (if provided)
-5. Run development server: `npm run dev`
+3. Install dependencies: `npm install` (or `yarn install` / `pnpm install`) from root
+4. Navigate to `apps/website` for the main application
+5. Copy environment variables template (if provided) to `apps/website/.env.local`
+6. Run development server: `npm run dev` from `apps/website/` or root (when Turborepo is configured)
 
 ## Environment Variables
 
@@ -28,22 +29,25 @@ Environment variables will be documented here once they are defined. Common vari
 
 The development server runs on `http://localhost:3000` by default.
 
-## Multi-Repository Workspace (Cursor)
+## Monorepo Structure
 
-If working with multiple repositories in Cursor:
+This is a Turborepo monorepo (setup upcoming):
 
-1. Open the parent folder (`~/dev/111-network/`) in Cursor
-2. Cursor will detect all subfolders as separate repositories
-3. Each repository maintains its own dependencies and configuration
-4. Be aware of which repository you're working in (check the file path)
+- **apps/website**: Main Next.js application (currently live)
+- **packages/**: Shared packages (database, protocol, ui)
+- Root `package.json`: Monorepo configuration and versioning (v0.1.0)
 
 ## Common Commands
 
+From `apps/website/`:
 - `npm run dev` - Start development server
 - `npm run build` - Build for production
 - `npm run start` - Start production server
 - `npm run lint` - Run linter
-- `npm run type-check` - Run TypeScript type checking
+
+From root (when Turborepo is configured):
+- `npm run dev` - Run dev for all apps
+- `npm run build` - Build all apps
 
 ## Troubleshooting
 
