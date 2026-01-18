@@ -27,6 +27,14 @@
 - Keep components small and focused
 - **shadcn/ui**: When using shadcn/ui components, refer to [shadcnblocks.com](https://docs.shadcnblocks.com/) for block patterns
 
+### Lockfile Management (CRITICAL)
+
+**Always keep `pnpm-lock.yaml` in sync with `package.json` files:**
+- After adding/removing dependencies, run `pnpm install` from root
+- Before committing, verify lockfile matches package.json: `pnpm install --frozen-lockfile` (should succeed)
+- Never commit lockfile changes without corresponding package.json changes
+- If lockfile is out of sync, regenerate: `rm pnpm-lock.yaml && pnpm install`
+
 ### Pull Request Process
 
 1. Ensure your code follows the project's code standards

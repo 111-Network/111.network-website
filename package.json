@@ -12,7 +12,9 @@
     "dev": "turbo run dev",
     "build": "turbo run build",
     "lint": "turbo run lint",
-    "start": "turbo run start"
+    "start": "turbo run start",
+    "lockfile:check": "pnpm install --frozen-lockfile",
+    "lockfile:fix": "rm pnpm-lock.yaml && pnpm install"
   },
   "devDependencies": {
     "turbo": "^2.7.5"

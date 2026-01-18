@@ -40,14 +40,16 @@ This is a Turborepo monorepo (setup upcoming):
 ## Common Commands
 
 From `apps/website/`:
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run start` - Start production server
-- `npm run lint` - Run linter
+- `pnpm dev` - Start development server
+- `pnpm build` - Build for production
+- `pnpm start` - Start production server
+- `pnpm lint` - Run linter
 
-From root (when Turborepo is configured):
-- `npm run dev` - Run dev for all apps
-- `npm run build` - Build all apps
+From root:
+- `pnpm dev` - Run dev for all apps
+- `pnpm build` - Build all apps
+- `pnpm lockfile:check` - Verify lockfile is in sync (use before committing)
+- `pnpm lockfile:fix` - Regenerate lockfile if out of sync
 
 ## Troubleshooting
 
