@@ -1,6 +1,6 @@
 # 111 Network Web - Documentation
 
-**Version**: v0.1.6 (Pre-MVP)  
+**Version**: v0.1.8 (Pre-MVP)  
 **Status**: Map UI MVP complete - Interactive MapLibre map with broadcast panel and full frontend
 
 ## Current State

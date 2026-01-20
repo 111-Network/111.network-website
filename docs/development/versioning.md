@@ -2,7 +2,7 @@
 
 ## Current Version
 
-**v0.1.6** (Pre-MVP)
+**v0.1.8** (Pre-MVP)
 
 ## Version Format
 
@@ -27,6 +27,8 @@ Currently in **Pre-MVP** phase:
 
 ## Version History
 
+- **v0.1.8** (2026-01-20): Admin login integration - Client-side authentication with route protection, session management, and role-based UI
+- **v0.1.7** (2026-01-20): Admin role system - Backend role and access control system with core team and community contributors support
 - **v0.1.6** (2026-01-19): Bug fixes - Fixed rate limiting errors, message flicker, TypeScript build errors, added Supabase CLI
 - **v0.1.5** (2026-01-19): Map UI MVP - Interactive MapLibre map, broadcast panel, message markers, full frontend implementation
 - **v0.1.4** (2026-01-19): Backend MVP - Broadcast API with rate limiting, database schema, RLS policies
